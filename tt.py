@@ -21,7 +21,7 @@ app.layout = html.Div([
     
     html.Div(className='row', children=[
         html.Div(className='six columns', children=[
-        dash_table.DataTable(data=df.to_dict('records'), page_size=10)
+        dash_table.DataTable(data=df.to_dict('records'), page_size=10, style_table={'overflowX': 'auto'})
         ]),
         html.Div(className='six columns', children=[
         dcc.Graph( figure={}, id='controls-and-graph')
